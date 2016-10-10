@@ -1,0 +1,1013 @@
+@charset 'utf-8';
+/* 所有字体文件引入源 ———— start */
+@font-face {
+    font-family: 'iconfont';
+    src:url('../fonts/icomoon.eot?7m8f6b');
+    src:url('../fonts/icomoon.eot?7m8f6b#iefix') format('embedded-opentype'),url('../fonts/icomoon.ttf?7m8f6b') format('truetype'),url('../fonts/icomoon.woff?7m8f6b') format('woff'),url('../fonts/icomoon.svg?7m8f6b#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    font-weight: normal;
+    font-style: normal;
+    margin-right: .3em;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    text-decoration: inherit;
+    display: inline-block;
+    speak: none;
+}
+
+.icon-angle-right:after {
+    content: "\e902";
+}
+
+.icon-book:after{
+    content: "\e907"
+}
+
+.icon-angle-left{
+    transform: rotate(180deg);
+    transition: all .2s ease;
+    cursor:pointer;
+}
+
+.icon-angle-left:after{
+    content: "\e902";
+}
+
+/* 所有字体文件引入源 ———— end */
+
+/**
+ * The initial resource of the html
+ *
+ * ================================
+ */
+.flex{
+    display:flex!important;   
+}
+
+.pd-10{
+    box-sizing:border-box!important;
+    padding:10px!important;
+}
+
+
+/**
+ * The initial resource of the page is reset
+ */
+
+html {
+    height: 100%;
+    width: 100%;
+    font-family:'Microsoft YaHei','iconfont'; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+}
+
+body{
+    position: relative;
+    height: 100%;
+    width:100%;
+    background-color: #fff;
+    color: #212121;
+    font-size: 14px;
+    margin: 0;
+    overflow: auto;
+}
+
+div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6,
+p, pre, a, img, strong,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label,
+table, tbody, tfoot, thead, tr, th, td ,a{
+    text-decoration: none;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #212121;
+}
+
+article,
+aside,
+details, /* 1 */
+figcaption,
+figure,
+footer,
+header,
+main, /* 2 */
+menu,
+nav,
+section,
+summary {
+    /* 1 */
+    display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+
+template, /* 1 */
+[hidden] {
+    display: none;
+}
+
+a {
+    background-color: transparent;
+}
+
+a:active,
+a:hover {
+    outline-width: 0;
+}
+
+abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+}
+
+b,
+strong {
+    font-weight: inherit;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+dfn {
+    font-style: italic;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+mark {
+    background-color: #ff0;
+    color: #000;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+img {
+    border-style: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+}
+
+figure {
+    margin: 1em 40px;
+}
+
+hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+}
+
+li{
+    list-style-type: none;
+}
+
+/* Forms
+   ========================================================================== 
+*/
+
+/**
+ * Change font properties to `inherit` in all browsers (opinionated).
+ */
+
+
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    outline:none;
+}
+
+optgroup {
+    font-weight: bold;
+}
+
+button,
+input, /* 1 */
+select {
+    /* 2 */
+    overflow: visible;
+}
+
+button,
+input,
+select,
+textarea {
+    /* 1 */
+    margin: 0;
+}
+
+/**
+ * Remove the inheritence of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritence of text transform in Firefox.
+ */
+
+button,
+select {
+    /* 1 */
+    text-transform: none;
+}
+
+/**
+ * Change the cursor in all browsers (opinionated).
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    cursor: pointer;
+}
+
+[disabled] {
+    cursor: no-drop;
+}
+
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input[type='text']:focus,
+textarea:focus {
+  border: 1px solid #008af5
+}
+
+textarea {
+    overflow: auto;
+}
+
+button:-moz-focusring,
+input:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/*
+* Applies to Google Chrome
+* 1. Resets the scroll bar of the page
+*/
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: rgba(0, 0, 0, 0.03);
+    width: 10px;
+    -webkit-border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background-color: #b5c2c9;
+    -webkit-border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: #b5c2c9;
+    -webkit-border-radius: 4px;
+}
+
+/*
+* Applies to Google Chrome
+* 1. Resets the button of the page
+*/
+[class^="btn-"] {
+    display:inline-block;
+    box-sizing:border-box;
+    min-width:64px;
+    height:28px;
+    line-height:27px;
+    padding:0 10px;
+    border-radius: 2px;
+    cursor:pointer;
+    border:none;
+    text-align:center;
+    font-size: 12px!important;
+}
+
+[class^="btn-"]:hover , [class^="btn-"].chk{
+    color:#fff;
+    background: #017cdc;
+}
+
+.btn-def {
+    color: #37474f;
+    background:#dde8f0;
+}
+
+.btn-imp {
+    color: #fff;
+    background:#03a9f4;
+}
+
+.btn-imp:disabled,.btn-def:disabled {
+    color: #78909c;
+    background: #e6ecef;
+    cursor:no-drop;
+}
+
+
+/*
+* Applies to Google Chrome
+* 1.The following are common styles for projects
+*/
+
+/*
+================== Page navigation ==================
+*/
+
+.header {
+    width: 100%;
+    height: 46px;
+    color: #000;
+    background-color:#e8f6ff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding:0 20px;
+    border-bottom: 1px solid #dbe5ea;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+    float: right;
+    line-height: 46px;
+    font-size:12px;
+}
+
+.user-info img{
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border-radius: 55%;
+    border: 2px solid white;
+    margin-right: 10px;
+}
+
+.header-fixed-top {
+    top: 0;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    float: left;
+    width: 220px;
+    height: 46px;
+    font-size: 14px;
+    color: #000;
+}
+
+.logo{
+    display: inline-block;
+    height: 27px;
+    width: 46px;
+    background: url(../images/logo.png) no-repeat;
+    background-size:cover;
+    vertical-align: -5px;
+    margin-right: 10px;
+}
+
+.header-wh {
+    height: 46px;
+    line-height: 46px;
+    padding: 0 24px 0 10px;
+}
+
+.header-title {
+    float: left;
+}
+
+/*头部导航 start*/
+.header-bar {
+    float: right;
+}
+
+.header-bar> ul> li {
+    width: 50px;
+    text-align: center;
+    list-style: none;
+    float: left;
+    position: relative;
+}
+
+.header-bar ul li> a {
+    color: #999;
+}
+
+.header-bar ul li .arrow {
+    display: none;
+}
+
+.header-bar ul li:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .07);
+}
+
+.header-bar> ul li> ul {
+    width: 180px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    text-align: left;
+    list-style: none;
+    background-color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    border-radius: 4px;
+}
+
+.header-bar ul li.open {
+    background-color: rgba(255, 255, 255, .07);
+}
+
+.header-bar ul li.open ul {
+    display: block;
+}
+
+.header-bar ul ul li a {
+    color: #333;
+    display: block;
+    padding: 19px 16px;
+    line-height: 1;
+}
+
+.header-bar ul ul li a:hover {
+    background-color: rgba(237, 240, 245, .5);
+}
+
+.header-bar ul ul li span:nth-child(1) {
+    width: 14px;
+    height: 14px;
+    margin-right: 15px;
+}
+/*头部导航 end*/
+
+/*左边导航栏样式 strat*/
+.navbar {
+    width: 220px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 999;
+    top: 46px;
+    left: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    overflow-y: auto;
+    border-right:1px solid #dbe5ea;
+}
+
+.date-time{
+    height: 48px;
+    line-height: 48px;
+    padding-left: 35px;
+    position: relative;
+    color: #37474f;
+    background-color:#f7fafd;
+    border-bottom: 1px solid #dbe5ea;
+}
+
+.date-time .date{
+    font-size: 15px;
+    margin-right:10px;
+}
+.date-time .week{
+    font-size: 14px;
+}
+.date-time .go-left{
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px 0 0 10px;
+    background-color: #f3f7fa;
+    top: 50%;
+    right: 0;
+    margin-top: -10px;
+    text-align: center;
+    line-height: 20px;
+    color: #a7b1c2;
+}
+.navbar-wrap {
+    width: 220px;
+    overflow-y: hidden;
+}
+
+.navbar-list {
+    width: 220px;
+}
+
+.navbar-list ul ul ul a{
+    padding-left: 40px;
+}
+
+.navbar-list li a {
+    display: flex;
+    align-items: center;
+    height:45px;
+    position:relative;
+    padding:0 16px;
+    font-size: 14px;
+    color: #000;
+}
+
+.navbar-list li a span:nth-child(1) {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    color:#666;
+}
+
+.navbar-list li a span:nth-child(2) {
+    display: inline-block;
+    margin-left: 15px;
+    color:#666;
+}
+
+.navbar-list ul li a .arrow {
+    position: absolute;
+    right: 10px;
+    top:12px;
+    float: right;
+    transform: translateY(2px);
+    transition: all .2s ease;
+}
+
+.navbar-list ul li.open> a .arrow {
+    position: absolute;
+    right: 10px;
+    top:12px;
+    float: right;
+    transform: rotate(90deg);
+    transition: all .2s ease;
+}
+
+.navbar-list>ul>li.open>ul {
+    display: block;
+}
+
+.navbar-list>ul ul>li.open>ul {
+    display: block;
+}
+
+.navbar-list li ul {
+    display: none;
+}
+
+.navbar-list a{
+    box-sizing: border-box;
+    border-top:1px solid transparent;
+    border-bottom:1px solid transparent;
+}
+
+.navbar-list a:hover,.navbar-list a.ckd {
+    background-color: #fafafa;
+    border-top:1px solid #dde6ef;
+    border-bottom:1px solid #dde6ef;
+}
+
+.navbar-list a.ckd span{
+    color:#008af5!important
+}
+
+/*
+* Applies to Google Chrome
+* 1.for main content
+*/
+.nav-box{
+    width:100%;
+    height:100%;
+    padding:56px 0 0 230px;
+}
+
+.content{
+    min-width:1050px;
+    width: 100%;
+    height:100%;
+    border:1px solid #dde6ef;
+    overflow:auto;
+}
+
+/* 
+* 左右布局两列 
+* ==============start==============
+*/
+.left_list,.right_list{
+    position: relative;
+    box-sizing: border-box;
+    height:100%;
+}
+
+.left_list{
+    border-right: 1px solid #dbe5ea;
+    overflow: hidden;
+    width: 30%;
+}
+
+.right_list {
+    overflow: hidden;
+    width: 70%;
+}
+
+.left_list .list_header, .right_list .list_header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: 46px;
+    background: #f7fafd;
+    border-bottom: 1px solid #dbe5ea;
+}
+
+/*
+* 仅限于left_list下面使用
+*/
+
+.add-more {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #78909c;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    box-shadow: 0 0px 4px 2px rgba(0,0,0,0.05);
+    cursor: pointer;
+    background-color: #fff;
+    border-top: 1px solid #dbe5ea;
+}
+
+/* 
+* 切换栏布局 
+* ==============start==============
+*/
+
+.tab-list {
+    display:flex;
+    font-size: 0;
+    border-bottom: 1px solid #dbe5ea;
+}
+
+.tab-list a {
+    display: inline-block;
+    padding: 15px 0;
+    width: 50%;
+    text-align: center;
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: -1px;
+    border-bottom: 1px solid transparent;
+}
+
+.tab-list a.ckd, .tab-list a:hover {
+    color: #008af5;
+}
+
+.tab-list a.ckd{
+    border-color: #008af5;
+}
+
+/* 
+* 表格table-list布局 
+* ==============start==============
+*/
+
+table {
+    border-collapse: collapse;
+}
+
+.table-box{
+    padding:10px 0 0 10px;
+    width:100%;
+    height:100%;
+    overflow:auto;
+}
+
+.table-list {
+    font-size:14px;
+    width: 100%;
+}
+
+.table-list a:not([class^="btn-"]){
+    color:#008af5!important
+}
+
+.table-list thead tr th,
+.table-list tbody tr td {
+    border-bottom: 1px solid #dbe5ea;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding:0 10px;
+    text-align: left;
+}
+
+.table-list thead tr th{
+    height:40px;
+    position:relative;
+}
+
+.table-list tbody tr:hover{
+    background: #f5fcff
+}
+
+.table-list thead tr th .must-point{
+    display:inline;
+    padding-left: 0;
+    margin-left: -10px;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+.table-list tbody tr td{
+    height:45px;
+}
+
+.table-list thead tr th {
+    font-weight: normal;
+    color: #757575;
+}
+
+.table-list thead tr {
+    background: #fafafa;
+    color: #666;
+}
+
+/* 
+* 左侧单条list布局 
+* ==============start==============
+*/
+
+
+.float-list li{
+    display: flex;
+    align-items: center;
+    height:50px;
+    line-height:50px;
+    padding-left:20px;
+    border-bottom:1px solid #dbe5ea
+}
+
+.float-list li.ckd,
+.float-list li:hover{
+    background-color:#fafafa;
+}
+
+.float-list li.ckd a,
+.float-list li:hover a{
+    color: #008af5;
+}
+
+.float-list li a{
+    line-height:1.2;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/*
+* 左侧多列list布局
+* ==============start==============
+*/
+.dob-list li{
+    line-height:50px;
+    position: relative;
+}
+
+.dob-list li.ckd ul,.dob-list li.open ul{
+    background-color:#fafafa
+}
+
+.dob-a li:hover,.dob-a>a:hover{
+    background: #f5fcff;
+}
+
+.dob-list>li.ckd>a,
+.dob-list>li.ckd>a *,
+.dob-list>li.ckd>ul .ckd a,
+.dob-list>.ckd.sr:before{
+    color: #008af5;
+}
+
+.dob-a.ckd{
+    color: #008af5;
+}
+
+.dob-a>a{
+    color:#212121;
+}
+
+.dob-list>li ul{
+    display: none;
+}
+
+.dob-list>li.open ul{
+    display:block;
+}
+
+.dob-a li:last-of-type{
+    border-bottom: 1px solid #dbe5ea;
+}
+
+.dob-a li:last-of-type a{
+    border-bottom:none;
+}
+
+.dob-list li a{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    line-height: 1px;
+    vertical-align: middle;
+    height: 50px;
+    border-bottom: 1px solid #dbe5ea;
+}
+
+.dob-list li a p{
+    display:block;
+    width:100%;
+}
+
+.dob-list>li>ul>li{
+    padding-left:40px;
+}
+
+.dob-list>li>ul>li a{
+    color: #757575
+}
+
+.dob-a a>div{
+    width:50%;
+    font-size:12px;
+    line-height: 1.5;
+}
+
+/*三角形*/
+.sr{
+    position: relative;
+}
+.sr:before,.dob-list>li>ul>li a:before{
+    display: inline-block;
+    position: absolute;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    width:40px;
+    left:0;
+    top:0;
+    transform: rotate(0deg);
+    transition: all .2s ease;
+}
+
+.sr>a:before{
+    content:'\e90e';
+    display: inline-block;
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    left: 0;
+    top: 0;
+    text-align: center;
+    line-height: 50px;
+}
+
+.dob-list>.open.sr>a:before{
+    transform: rotate(90deg);
+    transition: all .2s ease;
+}
+
+/*下面一二三头标签*/
+.dob-list>li>ul>li:nth-of-type(1) a:before{
+    content: '\e907'
+}
+
+.dob-list>li>ul>li:nth-of-type(2) a:before{
+    content: '\e908'
+}
+
+.dob-list>li>ul>li:nth-of-type(3) a:before{
+    content: '\e909'
+}
+
+
+

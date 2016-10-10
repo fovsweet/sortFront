@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>float-list</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../../common/css/common.css">
+</head>
+<body>
+<!--头部栏 start-->
+<div class="header header-fixed-top">
+	<input type="hidden" id="menucode" value="R10001_P10001_51764460">
+	<a href="" class="header-logo">
+		<span class="logo"></span> 我的经管
+	</a>
+	<div class="header-title header-wh">
+	</div>
+
+	<div class="header-bar header-wh" id="head-bar">
+		<!--此处会渲染头部菜单-->
+	</div>
+	<div class="user-info">
+		<img src="../../common/images/logo.png" alt="" />
+		<span>天下第一</span>
+	</div>
+</div>
+<!--头部栏 end-->
+
+<!--左边导航 start-->
+<div class="navbar">
+	<div class="date-time">
+		<span class="date">2016.08.23 </span><span class="week">星期六</span>
+		<span class="go-left icon-angle-left"></span>
+	</div>
+	<div class="navbar-wrap">
+		<div class="navbar-list" id="nav-list">
+			<!--此处会渲染菜单数据-->
+		</div>
+	</div>
+</div>
+<!--左边导航 end-->
+
+<div class="nav-box">
+	<div class="content flex">
+		<div class="left_list">
+			<div class="list_header flex-right">
+				<button disabled class="btn-def icon-fresh">刷新</button>
+				<a id="fresh" href="javascript:;" class="btn-imp icon-down ml-10">筛选</a>	
+			</div>
+			<div>
+				<ul class="dob-list">
+					<li class="ckd dob-a open sr">
+						<a href="javascript:;">
+							<div>
+								<p>15周</p>
+								<p>05/15-04/16</p>
+							</div>
+						</a>
+						<ul>
+							<li class="ckd"><a href="javascript:;">原料仓库1号</a></li>
+							<li><a href="javascript:;">原料仓库1号</a></li>
+							<li><a href="javascript:;">原料仓库1号</a></li>
+						</ul>
+					</li>
+					<li class="dob-a sr">
+						<a href="javascript:;">
+							<div>
+								<p>15周</p>
+								<p>05/15-04/16</p>
+							</div>
+						</a>
+						<ul>
+							<li><a href="javascript:;">原料仓库1号</a></li>
+							<li><a href="javascript:;">原料仓库1号</a></li>
+							<li><a href="javascript:;">原料仓库1号</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="add-more">加载更多...</div>
+		</div>
+		<div class="right_list">
+			<div class="list_header flex-right"></div>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="../../common/js/jquery-3.1.0.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+<script type="text/javascript">
+	// 选择第二列触发函数
+	$('.dob-list>li>a').on('click',function(){
+		var dom = $(this).parent()
+		dom.siblings().removeClass('open');
+		dom.toggleClass('open');
+	})
+
+	// 具体每个li下面每个具体项目的点击
+	$('.dob-list>li>ul a').on('click',function(){
+		var scendDom = $(this).parent(),firstDom = $(this).parent().parent().parent();
+		$('.dob-list>li>ul li').removeClass('ckd');
+		$('.dob-a').removeClass('ckd');
+		scendDom.addClass('ckd');
+		firstDom.addClass('ckd');
+	})
+</script>
+</html>
